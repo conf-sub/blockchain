@@ -163,9 +163,9 @@ func main() {
 		w.Write(bytes)
 	},)
 
-	fmt.Println("============ Listening at 127.0.0.1:9000 ============")
+	fmt.Println("============ Listening at 0.0.0.0:8060 ============")
 
-	http.ListenAndServe(":9000", nil)
+	http.ListenAndServe("0.0.0.0:8060", nil)
 
 }
 

@@ -206,7 +206,7 @@ func main() {
 
 	// MAKE REQUEST handler
 	http.HandleFunc( "/makeRequest", func(w http.ResponseWriter, r *http.Request) {
-		resp, err := http.PostForm("http://0.0.0.0:8050/fetchData", url.Values{"key": {"Value"}, "id": {"123"}})
+		resp, err := http.PostForm("http://0.0.0.0:8060/fetchData", url.Values{"key": {"Value"}, "id": {"123"}})
 		if err != nil {
 			panic(err)
 		}
