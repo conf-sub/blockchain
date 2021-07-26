@@ -43,22 +43,7 @@ def cifar_noniid(overlapping_classes, dataset, num_clients, num_classes):
     for i in range(num_classes):
         idx[i] = np.where(label == i)[0]
 
-    # if(num_clients<=5):
-    #     k = int(10/num_users)
-    #     for i in range(num_users):
-    #         a = 0
-    #         for j in range(i*k,(i+1)*k):
-    #             a += j
-    #             if(j==i*k):
-    #                 dict_users[i] = list(idx[j])
-    #             else:
-    #                 dict_users[i] = np.append(dict_users[i],idx[j])
-    #         print(a)
-    #     return dict_users
-    # if k = 4, a particular user can have samples only from at max 4 classes
-
     k = overlapping_classes
-
     num_examples = int(num_items / (k * num_clients))
 
     user_data, user_label = {}, {}

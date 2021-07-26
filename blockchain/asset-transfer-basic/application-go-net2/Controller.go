@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-    resp, err := http.Get("http://0.0.0.0:8050/makeRequest")
+    resp, err := http.Get("http://0.0.0.0:8060/makeRequest")
     if err != nil {
         panic(err)
 	}
